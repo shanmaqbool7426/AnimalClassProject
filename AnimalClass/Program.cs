@@ -37,7 +37,7 @@ namespace AnimalClass
     }
     public class Cat : Animal
     {
-        public Cat(object animal):base(animal)
+        public Cat(string animal):base(animal)
         {
             AAnimal = animal;
         }
@@ -57,7 +57,7 @@ namespace AnimalClass
     }
     public class Goat : Animal
     {
-        public Goat(object animal) : base(animal)
+        public Goat(string animal) : base(animal)
         {
             AAnimal = animal;
         }
@@ -74,7 +74,7 @@ namespace AnimalClass
     }
     public class Human : Animal
     {
-        public Human(object animal) : base(animal)
+        public Human(string animal) : base(animal)
         {
             AAnimal = animal;
         }
@@ -90,7 +90,7 @@ namespace AnimalClass
     }
     public class Lion : Animal
     {
-        public Lion(object animal) : base(animal)
+        public Lion(string animal) : base(animal)
         {
             AAnimal = animal;
         }
@@ -112,7 +112,7 @@ namespace AnimalClass
         {
             var arraylist = new ArrayList();
             int count = 1;
-            object d=null;
+            object addanimal=null;
             while(count!=5)
             {
                 Console.WriteLine("enter a number to select the animal... ");
@@ -120,7 +120,7 @@ namespace AnimalClass
                 if(choice==1)
                 {
                     Console.WriteLine("Add animal Dog... ");
-                     object add = Console.ReadLine();
+                     string add = Console.ReadLine();
                      d = new Dog(add);
                     arraylist.Add(d);
                     count++;
@@ -129,7 +129,7 @@ namespace AnimalClass
                 {
                     Console.WriteLine("Add animal cat... ");
                     object add = Console.ReadLine();
-                     d = new Cat(add);
+                     addanimal = new Cat(add);
                     arraylist.Add(d);
                     count++;
                 }
@@ -145,7 +145,7 @@ namespace AnimalClass
                 {
                     Console.WriteLine("Add  human... ");
                     object add = Console.ReadLine();
-                     d = new Human(add);
+                     addanimal = new Human(add);
                     arraylist.Add(d);
                     count++;
                 }
@@ -153,18 +153,11 @@ namespace AnimalClass
                 {
                     Console.WriteLine("Add animal Lion... ");
                     object add = Console.ReadLine();
-                     d = new Lion(add);
+                     addanimal = new Lion(add);
                     arraylist.Add(d);
                     count++;
                 }
-                if(choice==6)
-                {
-                    Console.WriteLine("animal.....");
-                    foreach (Animal items in arraylist)
-                    {
-                        Console.WriteLine(items);
-                    }
-                }
+                
             }
            //completed it.....
             Console.ReadLine();
